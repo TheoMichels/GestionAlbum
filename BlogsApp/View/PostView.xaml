@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="BlogsApp.PostView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BlogsApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel Margin="4">
+            <DockPanel>
+                <TextBlock Margin="4" Padding="4" Width="80" DockPanel.Dock="Left">Auteur :</TextBlock>
+                <TextBox Margin="4" Padding="4" Text="{Binding Auteur, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Margin="4" Padding="4" Width="80" DockPanel.Dock="Left">Titre :</TextBlock>
+                <TextBox Margin="4" Padding="4" Text="{Binding Titre, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Margin="4" Padding="4" Width="80" DockPanel.Dock="Left">Contenu :</TextBlock>
+                <TextBox Margin="4" Padding="4" Height="150" Text="{Binding Contenu, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
